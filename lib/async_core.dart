@@ -60,7 +60,7 @@ Future<AppiumWebDriver> createDriver(
   final session = await client.send(
       handler.session.buildCreateRequest(desired: addAppiumPrefix(desired)),
       handler.session.parseCreateResponse);
-
+  print("session id kjsasjaskjakssjaksj $session");
   if (session.spec != WebDriverSpec.JsonWire &&
       session.spec != WebDriverSpec.W3c) {
     throw 'Unexpected spec: ${session.spec}';
